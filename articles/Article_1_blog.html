@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article_1_blog - ClearVision</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-full {
+            background: white;
+            border-radius: 10px;
+            padding: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .article-full h1 { color: #333; margin-bottom: 0.5rem; font-size: 2rem; }
+        .article-full h2 { color: #667eea; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-full h3 { color: #764ba2; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .article-full .date { color: #999; font-size: 0.9rem; margin-bottom: 2rem; display: block; }
+        .article-full img { width: 100%; max-width: 600px; border-radius: 8px; margin: 1.5rem auto; display: block; }
+        .article-full p { margin-bottom: 1rem; line-height: 1.8; color: #444; font-size: 1.1rem; }
+        .article-full ul, .article-full ol { margin-bottom: 1rem; padding-left: 2rem; color: #444; }
+        .article-full li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .article-full code { background-color: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; color: #d63384; }
+        .article-full strong { color: #333; }
+        .back-link { display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; margin-top: 2rem; }
+        .back-link:hover { color: #764ba2; }
+        .loading { text-align: center; color: #999; padding: 2rem; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html" style="text-decoration: none; color: inherit;">
+            <h1>ClearVision</h1>
+        </a>
+        <p class="subtitle">Bienvenue sur mon espace personnel</p>
+    </header>
+
+    <main>
+        <article class="article-full" id="markdown-content">
+            <div class="loading">Chargement de l'article...</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ClearVision - Créé avec passion</p>
+    </footer>
+
+    <script>
+        async function loadMarkdown() {
+            try {
+                const response = await fetch('markdown/Article_1_blog.md');
+                const text = await response.text();
+
+                // Enlever les métadonnées (tout avant la deuxième ligne ---)
+                const content = text.replace(/^---[\s\S]*?---\n/, '');
+
+                // Convertir Markdown en HTML
+                const htmlContent = marked.parse(content);
+
+                document.getElementById('markdown-content').innerHTML = htmlContent;
+
+                // Ajouter le lien de retour
+                const backLink = document.createElement('a');
+                backLink.href = '../index.html';
+                backLink.className = 'back-link';
+                backLink.textContent = '← Retour à l\'accueil';
+                document.getElementById('markdown-content').appendChild(backLink);
+            } catch (error) {
+                document.getElementById('markdown-content').innerHTML = '<p style="color: red;">Erreur lors du chargement.</p>';
+            }
+        }
+        loadMarkdown();
+    </script>
+</body>
+</html>
