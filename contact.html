@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ClearVision</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles spécifiques à la page contact */
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-intro h1 {
+            font-size: 2.5rem;
+            color: #313131;
+            margin-bottom: 1rem;
+        }
+
+        .contact-intro p {
+            font-size: 1.1rem;
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        /* Formulaire de contact */
+        .contact-form {
+            background: #f9f9f9;
+            padding: 2.5rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: -apple-system, sans-serif;
+            font-weight: 600;
+            color: #313131;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            border: 1px solid #d0d0d0;
+            background: #ffffff;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #dd8c11;
+        }
+
+        .form-group textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #dd8c11;
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border: none;
+            font-family: -apple-system, sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #c77d0f;
+        }
+
+        /* Message d'information */
+        .info-box {
+            background: #fff8e6;
+            border-left: 4px solid #dd8c11;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-box p {
+            color: #555555;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .contact-intro h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>ClearVision</h1>
+        <p class="subtitle">Photographie & Réflexions</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <div class="contact-container">
+            <div class="contact-intro">
+                <h1>Me contacter</h1>
+                <p>Une question, un commentaire, ou simplement envie d'échanger ? N'hésitez pas à m'écrire, je serai ravi de vous lire.</p>
+            </div>
+
+            <!-- Boîte d'information -->
+            <div class="info-box">
+                <p><strong>Temps de réponse :</strong> Je réponds généralement sous 48 heures. Merci de votre patience !</p>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <form class="contact-form" action="https://formspree.io/f/mqedpgdd" method="POST">
+                <!-- Redirection après envoi -->
+                <input type="hidden" name="_next" value="https://tranquil-licorice-86a088.netlify.app/index.html">
+
+                <div class="form-group">
+                    <label for="name">Votre nom</label>
+                    <input type="text" id="name" name="name" required placeholder="Jean Dupont">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Votre email</label>
+                    <input type="email" id="email" name="email" required placeholder="jean.dupont@exemple.fr">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" required placeholder="À propos de votre article sur...">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" required placeholder="Écrivez votre message ici..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Envoyer le message</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ClearVision - Blog personnel</p>
+    </footer>
+</body>
+</html>

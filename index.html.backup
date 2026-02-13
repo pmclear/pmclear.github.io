@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearVision</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- En-tête du blog -->
+    <header>
+        <h1>ClearVision</h1>
+        <p class="subtitle">Bienvenue sur mon espace personnel</p>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section des articles -->
+        <section class="articles">
+            <h2>Articles récents</h2>
+
+            <!-- ARTICLES_PLACEHOLDER -->
+
+        </section>
+
+        <!-- Section galerie -->
+        <section class="articles" style="margin-top: 4rem;">
+            <h2>Galerie photos</h2>
+
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem 0;">
+
+                <div class="gallery-item" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="images/Le_cabanon.jpeg" alt="Le cabanon" style="width: 100%; height: 300px; object-fit: cover; display: block;">
+                    <div style="padding: 1rem; text-align: center;">
+                        <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 0.5rem;">Le cabanon</h3>
+                        <p style="color: #666; font-size: 0.9rem;">Une belle photo de mon cabanon</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="images/Letang.jpeg" alt="L'étang" style="width: 100%; height: 300px; object-fit: cover; display: block;">
+                    <div style="padding: 1rem; text-align: center;">
+                        <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 0.5rem;">L'étang</h3>
+                        <p style="color: #666; font-size: 0.9rem;">Une vue paisible de l'étang</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 ClearVision - Créé avec passion</p>
+    </footer>
+
+    <style>
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+    </style>
+</body>
+</html>

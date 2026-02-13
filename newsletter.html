@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - ClearVision</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles spécifiques à la page newsletter */
+        .newsletter-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .newsletter-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .newsletter-hero h1 {
+            font-size: 2.5rem;
+            color: #313131;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-hero p {
+            font-size: 1.1rem;
+            color: #555555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Avantages de l'abonnement */
+        .benefits {
+            background: #f9f9f9;
+            padding: 2rem;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+        }
+
+        .benefits h2 {
+            font-size: 1.5rem;
+            color: #313131;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #555555;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #dd8c11;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Formulaire d'abonnement */
+        .subscribe-form {
+            background: #ffffff;
+            padding: 2.5rem;
+            border: 2px solid #dd8c11;
+        }
+
+        .subscribe-form h3 {
+            font-size: 1.3rem;
+            color: #313131;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: -apple-system, sans-serif;
+            font-weight: 600;
+            color: #313131;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            border: 1px solid #d0d0d0;
+            background: #ffffff;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #dd8c11;
+        }
+
+        .privacy-notice {
+            font-size: 0.85rem;
+            color: #888888;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .subscribe-btn {
+            background: #dd8c11;
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border: none;
+            font-family: -apple-system, sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .subscribe-btn:hover {
+            background: #c77d0f;
+        }
+
+        /* Promesse */
+        .promise {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #fff8e6;
+            border-left: 4px solid #dd8c11;
+        }
+
+        .promise p {
+            color: #555555;
+            margin: 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .subscribe-form {
+                padding: 1.5rem;
+            }
+
+            .newsletter-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>ClearVision</h1>
+        <p class="subtitle">Photographie & Réflexions</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <div class="newsletter-container">
+            <div class="newsletter-hero">
+                <h1>📬 Newsletter gratuite</h1>
+                <p>Recevez mes derniers articles et photos directement dans votre boîte mail. Un message par mois, sans spam.</p>
+            </div>
+
+            <!-- Avantages -->
+            <div class="benefits">
+                <h2>Ce que vous recevrez</h2>
+                <ul class="benefits-list">
+                    <li>Mes nouveaux articles en avant-première</li>
+                    <li>Une sélection mensuelle de mes meilleures photos</li>
+                    <li>Des réflexions exclusives réservées aux abonnés</li>
+                    <li>Des coulisses de mon travail photographique</li>
+                    <li>100% gratuit, sans engagement</li>
+                </ul>
+            </div>
+
+            <!-- Formulaire d'abonnement -->
+            <form class="subscribe-form" action="https://formspree.io/f/mqedpgdd" method="POST">
+                <!-- Champ caché pour identifier qu'il s'agit d'une inscription newsletter -->
+                <input type="hidden" name="_subject" value="Nouvelle inscription à la newsletter">
+                <!-- Redirection après envoi -->
+                <input type="hidden" name="_next" value="https://tranquil-licorice-86a088.netlify.app/index.html">
+
+                <h3>Rejoignez la communauté</h3>
+
+                <div class="form-group">
+                    <label for="name">Votre prénom</label>
+                    <input type="text" id="name" name="name" required placeholder="Jean">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Votre email</label>
+                    <input type="email" id="email" name="email" required placeholder="jean.dupont@exemple.fr">
+                </div>
+
+                <p class="privacy-notice">
+                    Vos données sont protégées et ne seront jamais partagées avec des tiers. Vous pouvez vous désabonner à tout moment en un clic.
+                </p>
+
+                <button type="submit" class="subscribe-btn">S'abonner gratuitement</button>
+            </form>
+
+            <!-- Promesse -->
+            <div class="promise">
+                <p>« Je m'engage à respecter votre boîte mail : un envoi maximum par mois, et uniquement du contenu de qualité. »</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ClearVision - Blog personnel</p>
+    </footer>
+</body>
+</html>

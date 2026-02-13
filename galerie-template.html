@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - ClearVision</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Galerie photos style blog */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            transition: box-shadow 0.3s;
+        }
+
+        .gallery-item:hover {
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-caption {
+            padding: 1.5rem;
+        }
+
+        .gallery-caption h3 {
+            font-size: 1.2rem;
+            color: #313131;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-caption p {
+            color: #888888;
+            font-size: 0.9rem;
+        }
+
+        .gallery-subject {
+            font-size: 1.4rem;
+            color: #dd8c11;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .gallery-subject:first-of-type {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>ClearVision</h1>
+        <p class="subtitle">Photographie & Réflexions</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="galerie.html" style="color: #dd8c11;">Galerie</a></li>
+            <li><a href="documents.html">Documents</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <section class="articles">
+            <h2>Ma galerie</h2>
+
+            <!-- GALLERY_PLACEHOLDER -->
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 ClearVision - Créé avec passion</p>
+    </footer>
+</body>
+</html>

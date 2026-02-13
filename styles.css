@@ -1,0 +1,201 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typographie - Style blog professionnel */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #313131;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #313131;
+}
+
+/* En-tête simple et professionnel */
+header {
+    background: #ffffff;
+    border-bottom: 3px solid #dd8c11;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #313131;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #888888;
+    font-style: italic;
+}
+
+/* Navigation */
+nav {
+    background: #f9f9f9;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-links {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0 2rem;
+}
+
+.nav-links a {
+    color: #313131;
+    text-decoration: none;
+    font-family: -apple-system, sans-serif;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #dd8c11;
+}
+
+/* Contenu principal */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* Section articles */
+.articles {
+    margin-bottom: 3rem;
+}
+
+.articles h2 {
+    font-size: 1.8rem;
+    color: #313131;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #dd8c11;
+}
+
+/* Carte article - Style blog classique */
+.article-card {
+    background: #ffffff;
+    margin-bottom: 3rem;
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s;
+}
+
+.article-card:hover {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.article-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.article-content {
+    padding: 2rem;
+}
+
+.article-content h3 {
+    font-size: 1.5rem;
+    color: #313131;
+    margin-bottom: 0.5rem;
+}
+
+.article-content h3 a {
+    color: #313131;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.article-content h3 a:hover {
+    color: #dd8c11;
+}
+
+.article-date {
+    color: #888888;
+    font-size: 0.9rem;
+    font-family: -apple-system, sans-serif;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.article-excerpt {
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.read-more {
+    display: inline-block;
+    color: #dd8c11;
+    text-decoration: none;
+    font-family: -apple-system, sans-serif;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #dd8c11;
+    transition: all 0.3s;
+}
+
+.read-more:hover {
+    background: #dd8c11;
+    color: #ffffff;
+}
+
+/* Pied de page */
+footer {
+    background: #313131;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-family: -apple-system, sans-serif;
+}
+
+footer p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .article-content {
+        padding: 1.5rem;
+    }
+}

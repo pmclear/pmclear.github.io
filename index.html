@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearVision - Blog & Photographie</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page d'accueil spécifique */
+        .home-hero {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .home-hero h1 {
+            font-size: 3rem;
+            color: #313131;
+            margin-bottom: 1rem;
+        }
+
+        .home-hero p {
+            font-size: 1.2rem;
+            color: #555555;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .home-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-family: -apple-system, sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid #dd8c11;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #dd8c11;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #c77d0f;
+            border-color: #c77d0f;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #dd8c11;
+        }
+
+        .btn-secondary:hover {
+            background: #dd8c11;
+            color: #ffffff;
+        }
+
+        .home-divider {
+            max-width: 960px;
+            margin: 4rem auto;
+            border: 0;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .home-hero h1 {
+                font-size: 2rem;
+            }
+
+            .home-buttons {
+                flex-direction: column;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>ClearVision</h1>
+        <p class="subtitle">Photographie & Réflexions</p>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="home-hero">
+        <h1>Bienvenue</h1>
+        <p>Explorez mes photographies et découvrez mes réflexions sur la vie, l'art et la beauté du quotidien.</p>
+
+        <div class="home-buttons">
+            <a href="articles.html" class="btn btn-primary">Lire les articles</a>
+            <a href="galerie.html" class="btn btn-secondary">Voir la galerie</a>
+            <a href="documents.html" class="btn btn-secondary">Voir les documents</a>
+            <a href="newsletter.html" class="btn btn-secondary">S'abonner</a>
+            <a href="contact.html" class="btn btn-secondary">Me contacter</a>
+        </div>
+    </div>
+
+    <hr class="home-divider">
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ClearVision - Blog personnel</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents - ClearVision</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Style pour la liste des documents */
+        .documents-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .document-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 1.5rem;
+            transition: box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .document-card:hover {
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .document-icon {
+            font-size: 3rem;
+            color: #dd8c11;
+        }
+
+        .document-info {
+            flex: 1;
+        }
+
+        .document-info h3 {
+            font-size: 1.2rem;
+            color: #313131;
+            margin-bottom: 0.3rem;
+        }
+
+        .document-info .document-type {
+            color: #888888;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .document-link {
+            display: inline-block;
+            color: #dd8c11;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .document-link:hover {
+            color: #b87010;
+        }
+
+        .documents-subject {
+            font-size: 1.4rem;
+            color: #dd8c11;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .documents-subject:first-of-type {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>ClearVision</h1>
+        <p class="subtitle">Photographie & Réflexions</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="documents.html" style="color: #dd8c11;">Documents</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <section class="articles">
+            <h2>Mes documents</h2>
+
+            <!-- DOCUMENTS_PLACEHOLDER -->
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 ClearVision - Créé avec passion</p>
+    </footer>
+</body>
+</html>
