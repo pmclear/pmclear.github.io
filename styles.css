@@ -70,6 +70,12 @@ nav {
     color: #dd8c11;
 }
 
+/* Lien actif dans la navigation */
+.nav-links a.active {
+    color: #dd8c11;
+    font-weight: 600;
+}
+
 /* Contenu principal */
 main {
     max-width: 960px;
